@@ -1,15 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
 
 :root {
     /* colors */
-    --white: #FFFFFF;
+    --white: #ffffff;
     --black: #000000;
-    --gray-950: #1D2026;
-    --gray-500: #69707D;
-    --gray-300: #C3CAD9;
-    --gray-100: #E4E9F2;
-    --gray-50: #F6F8FD;
-    --orange-500: #FF7E1B;
-    --orange-300: #FFAB6A;
+    --gray-950: #1d2026;
+    --gray-500: #69707d;
+    --gray-300: #c3cad9;
+    --gray-100: #e4e9f2;
+    --gray-50: #f6f8fd;
+    --orange-500: #ff7e1b;
+    --orange-300: #ffab6a;
 
     /* spacing */
     --space-1600: 8rem;
@@ -33,6 +67,104 @@
     --text-preset-4: normal 0.9375rem/1.625rem "Kumbh Sans";
     --text-preset-5: bold 0.8125rem/1rem "Kumbh Sans";
     --text-preset-6: bold 0.75rem/0.9375rem "Kumbh Sans";
+}
+
+header {
+    /* padding-inline: 1.5rem;
+    padding-block-start: 1.25rem;
+    padding-block-end: 1.5rem; */
+    padding: 1.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.menu__button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+}
+
+.menu__button:hover,
+.menu__button:focus {
+    cursor: pointer;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.cart {
+    background: none;
+    border: none;
+}
+
+.cart:hover,
+.cart:focus {
+    cursor: pointer;
+}
+
+.cart__icon {
+    height: 1.25rem;
+}
+
+.avatar {
+    border-radius: 100%;
+    background: none;
+    border: none;
+}
+
+.avatar:hover,
+.avatar:focus {
+    cursor: pointer;
+}
+
+.avatar__icon {
+    height: 1.5rem;
+}
+
+.slider__image {
+    width: 100%;
+    height: 18.75rem;
+    object-fit: cover;
+}
+
+.slider__content {
+    position: relative;
+}
+
+.slider__control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider__button {
+    padding: 0.875rem 0.979375rem;
+    border-radius: 100%;
+    border: none;
+    background: var(--white);
+}
+
+.slider__icon {
+    height: 0.75rem;
 }
 
 footer {
