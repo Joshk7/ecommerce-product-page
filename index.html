@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | E-commerce product page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/style.css" />
+        <script href="/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav aria-label="navigation">
+                <div class="menu">
+                    <button class="menu__button" id="menu-button">
+                        <img
+                            class="menu__icon"
+                            src="/images/icon-menu.svg"
+                            alt="Open main menu"
+                        />
+                    </button>
+                    <img class="logo" src="/images/logo.svg" alt="Sneakers" />
+                    <ul class="menu__list" role="menu" hidden>
+                        <li class="menu__list--item" role="menuitem">
+                            <a class="menu__link" href="#collections"
+                                >Collections</a
+                            >
+                        </li>
+                        <li class="menu__list--item" role="menuitem">
+                            <a class="menu__link" href="#men"> Men </a>
+                        </li>
+                        <li class="menu__list--item" role="menuitem">
+                            <a class="menu__link" href="#women"> Women </a>
+                        </li>
+                        <li class="menu__list--item" role="menuitem">
+                            <a class="menu__link" href="#about"> About </a>
+                        </li>
+                        <li class="menu__list--item" role="menuitem">
+                            <a class="menu__link" href="#contact"> Contact </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account">
+                    <button class="cart" id="cart">
+                        <img
+                            class="cart__icon"
+                            src="/images/icon-cart.svg"
+                            alt="Open cart items"
+                        />
+                    </button>
+                    <button class="avatar">
+                        <img
+                            class="avatar__image"
+                            src="/images/image-avatar.png"
+                            alt="Profile avatar"
+                        />
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section
+                class="slider"
+                id="product-slider"
+                aria-label="Product Slider"
+            >
+                <div class="slider__content">
+                    <img
+                        class="slider__image"
+                        src="/images/image-product-1.jpg"
+                        alt="Product image one"
+                    />
+                    <div class="slider__control">
+                        <button class="slider__previous">
+                            <img
+                                class="slider__icon"
+                                src="/images/icon-previous.svg"
+                                alt="Previous button"
+                            />
+                        </button>
+                        <button class="slider__next">
+                            <img
+                                class="slider__icon"
+                                src="/images/icon-next.svg"
+                                alt="Next button"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info" id="product-info">
+                <div>
+                    <span>Sneaker Company</span>
+                    <h1>Fall Limited Edition Sneakers</h1>
+                    <p>
+                        These low-profile sneakers are your perfect casual wear
+                        companion. Featuring a durable rubber outer sole,
+                        they’ll withstand everything the weather can offer.
+                    </p>
+                </div>
+
+                <div class="cost">
+                    <div class="cost__details">
+                        <span class="amount">$125.00</span>
+                        <span class="discount">50%</span>
+                    </div>
+                    <span class="cost__previously">$250.00</span>
+                </div>
+
+                <div class="quantity">
+                    <div class="quantity__increment">
+                        <img
+                            class="quantity__decrease"
+                            src="/images/icon-minus.svg"
+                            alt="Decrease quantity"
+                        />
+                        <span class="quantity__amount">0</span>
+                        <img
+                            class="quantity__increase"
+                            src="/images/icon-plus.svg"
+                            alt="Increase quantity"
+                        />
+                    </div>
+                    <button class="add" id="add-to-cart">
+                        <img
+                            class="add__icon"
+                            src="/images/icon-cart.svg"
+                            alt="Cart"
+                        />
+                        <span class="add__text">Add to cart</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+        </footer>
+    </body>
+</html>

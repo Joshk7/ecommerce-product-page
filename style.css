@@ -1,0 +1,48 @@
+
+:root {
+    /* colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray-950: #1D2026;
+    --gray-500: #69707D;
+    --gray-300: #C3CAD9;
+    --gray-100: #E4E9F2;
+    --gray-50: #F6F8FD;
+    --orange-500: #FF7E1B;
+    --orange-300: #FFAB6A;
+
+    /* spacing */
+    --space-1600: 8rem;
+    --space-1300: 6.5rem;
+    --space-1200: 6rem;
+    --space-1000: 5rem;
+    --space-900: 4.5rem;
+    --space-700: 3.5rem;
+    --space-600: 3rem;
+    --space-500: 2.5rem;
+    --space-400: 2rem;
+    --space-300: 1.5rem;
+    --space-200: 1rem;
+    --space-100: 0.5rem;
+
+    /* typography */
+    --text-preset-1: bold 2.75rem/3rem "Kumbh Sans";
+    --text-preset-2: bold 1.75rem/2rem "Kumbh Sans";
+    --text-preset-3-bold: bold 1rem/1.625rem "Kumbh Sans";
+    --text-preset-3: normal 1rem/1.625rem "Kumbh Sans";
+    --text-preset-4: normal 0.9375rem/1.625rem "Kumbh Sans";
+    --text-preset-5: bold 0.8125rem/1rem "Kumbh Sans";
+    --text-preset-6: bold 0.75rem/0.9375rem "Kumbh Sans";
+}
+
+footer {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
