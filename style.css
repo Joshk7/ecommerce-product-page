@@ -163,8 +163,20 @@ nav {
     background: var(--white);
 }
 
+.slider__button:hover,
+.slider__button:focus {
+    cursor: pointer;
+}
+
 .slider__icon {
     height: 0.75rem;
+}
+
+.info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
 }
 
 footer {
