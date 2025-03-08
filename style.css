@@ -280,6 +280,7 @@ nav {
 
 .add__text {
     font: var(--text-preset-3-bold);
+    color: var(--gray-950);
 }
 
 footer {
