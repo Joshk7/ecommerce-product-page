@@ -73,6 +73,10 @@ body {
     padding-bottom: 3.375rem;
 }
 
+button:focus {
+    outline-color: var(--orange-500);
+}
+
 header {
     /* padding-inline: 1.5rem;
     padding-block-start: 1.25rem;
@@ -172,6 +176,12 @@ nav {
     cursor: pointer;
 }
 
+.slider__button:hover .slider__icon,
+.slider__button:focus .slider__icon {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(43%) saturate(7302%)
+        hue-rotate(307deg) brightness(98%) contrast(104%);
+}
+
 .slider__icon {
     height: 0.75rem;
 }
@@ -196,7 +206,7 @@ nav {
 }
 
 .info__brand {
-    font: bold 0.75rem/normal "Kumbh Sans";
+    font: bold 0.75rem / normal "Kumbh Sans";
     color: var(--gray-500);
     text-transform: uppercase;
 }
@@ -252,9 +262,24 @@ nav {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-radius: 0.625rem;
     background: var(--gray-50);
+}
+
+.quantity__button {
+    width: 1.625rem;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline-color: var(--orange-500);
+}
+
+.quantity__button:hover .quantity__icon,
+.quantity__button:focus .quantity__icon {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(43%) saturate(7302%)
+        hue-rotate(307deg) brightness(98%) contrast(104%);
 }
 
 .quantity__amount {
@@ -270,12 +295,19 @@ nav {
     background: var(--orange-500);
     border-radius: 0.625rem;
     border: none;
-    box-shadow: 0 1.25rem 3.125rem #FF7E1B40;
+    box-shadow: 0 1.25rem 3.125rem #ff7e1b40;
+}
+
+.add:hover,
+.add:focus {
+    cursor: pointer;
+    background: var(--orange-300);
 }
 
 .add__icon {
     height: 1rem;
-    filter: brightness(0) saturate(100%) invert(11%) sepia(2%) saturate(4084%) hue-rotate(141deg) brightness(94%) contrast(93%)
+    filter: brightness(0) saturate(100%) invert(11%) sepia(2%) saturate(4084%)
+        hue-rotate(141deg) brightness(94%) contrast(93%);
 }
 
 .add__text {
