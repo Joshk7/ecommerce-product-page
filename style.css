@@ -73,6 +73,7 @@ body {
     padding-bottom: 3.375rem;
 }
 
+button:hover,
 button:focus {
     outline-color: var(--orange-500);
 }
@@ -82,6 +83,8 @@ header {
     padding-block-start: 1.25rem;
     padding-block-end: 1.5rem; */
     padding: 1.5rem;
+    max-width: 38rem;
+    margin-inline: auto;
 }
 
 nav {
@@ -106,6 +109,12 @@ nav {
     cursor: pointer;
 }
 
+.menu__button:hover .menu__icon,
+.menu__button:focus .menu__icon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(4%) saturate(1455%)
+        hue-rotate(177deg) brightness(99%) contrast(101%);
+}
+
 .account {
     display: flex;
     align-items: center;
@@ -126,6 +135,12 @@ nav {
     height: 1.25rem;
 }
 
+.cart:hover .cart__icon,
+.cart:focus .cart__icon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(4%) saturate(1455%)
+        hue-rotate(177deg) brightness(99%) contrast(101%);
+}
+
 .avatar {
     border-radius: 100%;
     background: none;
@@ -134,6 +149,7 @@ nav {
 
 .avatar:hover,
 .avatar:focus {
+    outline: 0.125rem solid var(--orange-500);
     cursor: pointer;
 }
 
@@ -141,10 +157,16 @@ nav {
     height: 1.5rem;
 }
 
+main {
+    max-width: 38rem;
+    margin-inline: auto;
+}
+
 .slider__image {
     width: 100%;
     height: 18.75rem;
     object-fit: cover;
+    object-position: center;
 }
 
 .slider__content {
@@ -207,6 +229,7 @@ nav {
 
 .info__brand {
     font: bold 0.75rem / normal "Kumbh Sans";
+    letter-spacing: 0.115625rem;
     color: var(--gray-500);
     text-transform: uppercase;
 }
@@ -325,4 +348,78 @@ footer {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 40rem) {
+    body {
+        padding-block-start: 1.75rem;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    nav {
+        margin-block-end: 2rem;
+    }
+
+    .avatar__icon {
+        height: 3.125rem;
+    }
+
+    .slider__content {
+        margin-block: 3rem;
+    }
+
+    .slider__image {
+        border-radius: 0.9375rem;
+        height: 18.125rem;
+    }
+
+    .info {
+        padding: 0;
+        row-gap: 1.5rem;
+    }
+
+    .info__content {
+        row-gap: 1.5rem;
+    }
+
+    .info__title {
+        row-gap: 1.5rem;
+    }
+
+    .info__brand {
+        letter-spacing: 0.125rem;
+    }
+
+    .info__header {
+        font: var(--text-preset-1);
+    }
+
+    .info__description {
+        font: var(--text-preset-3);
+    }
+
+    .cost {
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .cost__details {
+        column-gap: 1.5rem;
+    }
+
+    .quantity {
+        flex-direction: row;
+        column-gap: 0.5rem;
+    }
+
+    .quantity__increment {
+        flex: 1;
+    }
+
+    .add {
+        flex: 1;
+    }
 }
