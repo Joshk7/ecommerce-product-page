@@ -93,6 +93,10 @@ nav {
     justify-content: space-between;
 }
 
+.divider {
+    border: 0.0625rem solid var(--gray-100);
+}
+
 .menu {
     display: flex;
     column-gap: 1rem;
@@ -356,7 +360,13 @@ footer {
     }
 
     header {
+        width: 80%;
+        max-width: 1110px;
         padding: 0;
+    }
+
+    .account {
+        column-gap: 3rem;
     }
 
     nav {
@@ -374,6 +384,11 @@ footer {
     .slider__image {
         border-radius: 0.9375rem;
         height: 18.125rem;
+    }
+
+    main {
+        width: 80%;
+        max-width: 1110px;
     }
 
     .info {
