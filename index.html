@@ -32,7 +32,7 @@
                         />
                     </button>
                     <img class="logo" src="/images/logo.svg" alt="Sneakers" />
-                    <ul class="menu__list" role="menu" hidden>
+                    <ul class="menu__list" role="menu">
                         <li class="menu__list--item" role="menuitem">
                             <a class="menu__link" href="#collections"
                                 >Collections</a
@@ -42,7 +42,13 @@
                             <a class="menu__link" href="#men"> Men </a>
                         </li>
                         <li class="menu__list--item" role="menuitem">
-                            <a class="menu__link" href="#women"> Women </a>
+                            <a
+                                class="menu__link"
+                                href="#women"
+                                data-selected="true"
+                            >
+                                Women
+                            </a>
                         </li>
                         <li class="menu__list--item" role="menuitem">
                             <a class="menu__link" href="#about"> About </a>
@@ -100,31 +106,45 @@
                         </button>
                     </div>
                 </div>
-                <div class="slider__gallery">
-                    <button>
-                        <img
-                            src="/images/image-product-1-thumbnail.jpg"
-                            alt="First"
-                        />
-                    </button>
-                    <button>
-                        <img
-                            src="/images/image-product-2-thumbnail.jpg"
-                            alt="Second"
-                        />
-                    </button>
-                    <button>
-                        <img
-                            src="/images/image-product-3-thumbnail.jpg"
-                            alt="Third"
-                        />
-                    </button>
-                    <button>
-                        <img
-                            src="/images/image-product-4-thumbnail.jpg"
-                            alt="Fourth"
-                        />
-                    </button>
+                <div class="thumbnails">
+                    <ul class="thumbnails__list">
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-1-thumbnail.jpg"
+                                    alt="First"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-2-thumbnail.jpg"
+                                    alt="Second"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-3-thumbnail.jpg"
+                                    alt="Third"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-4-thumbnail.jpg"
+                                    alt="Fourth"
+                                />
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
