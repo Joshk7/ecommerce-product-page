@@ -213,6 +213,10 @@ main {
     height: 0.75rem;
 }
 
+.slider__gallery {
+    display: none;
+}
+
 .info {
     padding: 1.5rem;
     display: flex;
