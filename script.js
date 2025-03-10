@@ -19,7 +19,7 @@ const thumbnails = [
 let sliderIndex = 0;
 
 const handleSliderLeft = (e) => {
-    sliderIndex = (sliderIndex - (1 % 4) + 4) % 4;
+    sliderIndex = (sliderIndex - 1 + 4) % 4;
     const newSource = images[sliderIndex];
     sliderImage.src = newSource;
 };
