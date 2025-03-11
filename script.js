@@ -1,3 +1,6 @@
+const menuButton = document.getElementById("menu-button");
+const menuDialog = document.getElementById("menu-dialog");
+
 const slider = document.getElementById("slider");
 const sliderImage = slider.querySelector(".slider__image");
 const [sliderLeft, sliderRight] = slider.querySelectorAll(".slider__button");
@@ -18,6 +21,10 @@ const thumbnails = [
 
 let sliderIndex = 0;
 
+const handleOpenMenu = (e) => {
+    menuDialog.showModal();
+};
+
 const handleSliderLeft = (e) => {
     sliderIndex = (sliderIndex - 1 + 4) % 4;
     const newSource = images[sliderIndex];
@@ -29,6 +36,8 @@ const handleSliderRight = (e) => {
     const newSource = images[sliderIndex];
     sliderImage.src = newSource;
 };
+
+menuButton.addEventListener("click", handleOpenMenu);
 
 sliderLeft.addEventListener("click", handleSliderLeft);
 sliderRight.addEventListener("click", handleSliderRight);
