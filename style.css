@@ -440,10 +440,24 @@ footer {
     max-width: 300px;
     min-height: 100%;
     padding: 1.5rem;
+}
+
+.panel__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 3.5rem;
+}
+
+.panel__button {
+    border: none;
+    background: none;
+}
+
+.panel__button:hover,
+.panel__button:focus {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(51%) sepia(68%) saturate(881%) hue-rotate(345deg) brightness(100%) contrast(103%);
 }
 
 .panel__list {

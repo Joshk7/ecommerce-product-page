@@ -80,11 +80,13 @@
         <main>
             <section class="slider" id="slider" aria-label="Product Slider">
                 <div class="slider__content">
-                    <img
-                        class="slider__image"
-                        src="/images/image-product-1.jpg"
-                        alt="Product image one"
-                    />
+                    <button id="lightbox-button">
+                        <img
+                            class="slider__image"
+                            src="/images/image-product-1.jpg"
+                            alt="Product image one"
+                        />
+                    </button>
                     <div class="slider__control">
                         <button id="slider-button" class="slider__button">
                             <img
@@ -208,32 +210,40 @@
         </footer>
 
         <dialog class="panel" id="menu-dialog">
-            <button class="panel__button">
-                <img
-                    class="panel__close"
-                    src="/images/icon-close.svg"
-                    alt="Close menu"
-                />
-            </button>
-            <ul class="panel__list">
-                <li class="panel__list--item">
-                    <a class="panel__list--link" href="#collections"
-                        >Collections</a
-                    >
-                </li>
-                <li class="panel__list--item">
-                    <a class="panel__list--link" href="#men"> Men </a>
-                </li>
-                <li class="panel__list--item">
-                    <a class="panel__list--link" href="#women"> Women </a>
-                </li>
-                <li class="panel__list--item">
-                    <a class="panel__list--link" href="#about"> About </a>
-                </li>
-                <li class="panel__list--item">
-                    <a class="panel__list--link" href="#contact"> Contact </a>
-                </li>
-            </ul>
+            <div class="panel__content">
+                <button id="menu-close" class="panel__button">
+                    <img
+                        class="panel__close"
+                        src="/images/icon-close.svg"
+                        alt="Close menu"
+                    />
+                </button>
+                <ul class="panel__list">
+                    <li class="panel__list--item">
+                        <a class="panel__list--link" href="#collections"
+                            >Collections</a
+                        >
+                    </li>
+                    <li class="panel__list--item">
+                        <a class="panel__list--link" href="#men"> Men </a>
+                    </li>
+                    <li class="panel__list--item">
+                        <a class="panel__list--link" href="#women"> Women </a>
+                    </li>
+                    <li class="panel__list--item">
+                        <a class="panel__list--link" href="#about"> About </a>
+                    </li>
+                    <li class="panel__list--item">
+                        <a class="panel__list--link" href="#contact"> Contact </a>
+                    </li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="lightbox-dialog" class="lightbox">
+            <div class="lightbox__content">
+                Lightbox!
+            </div>
         </dialog>
     </body>
 </html>
