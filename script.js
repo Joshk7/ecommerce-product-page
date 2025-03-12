@@ -4,6 +4,7 @@ const menuClose = document.getElementById("menu-close");
 
 const lightboxButton = document.getElementById("lightbox-button");
 const lightboxDialog = document.getElementById("lightbox-dialog");
+const lightboxClose = document.getElementById("lightbox-close");
 
 const slider = document.getElementById("slider");
 const sliderImage = slider.querySelector(".slider__image");

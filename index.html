@@ -80,7 +80,7 @@
         <main>
             <section class="slider" id="slider" aria-label="Product Slider">
                 <div class="slider__content">
-                    <button id="lightbox-button">
+                    <button id="lightbox-button" class="openlightbox">
                         <img
                             class="slider__image"
                             src="/images/image-product-1.jpg"
@@ -211,7 +211,7 @@
 
         <dialog class="panel" id="menu-dialog">
             <div class="panel__content">
-                <button id="menu-close" class="panel__button">
+                <button id="menu-close" class="panel__close">
                     <img
                         class="panel__close"
                         src="/images/icon-close.svg"
@@ -234,7 +234,9 @@
                         <a class="panel__list--link" href="#about"> About </a>
                     </li>
                     <li class="panel__list--item">
-                        <a class="panel__list--link" href="#contact"> Contact </a>
+                        <a class="panel__list--link" href="#contact">
+                            Contact
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -242,7 +244,81 @@
 
         <dialog id="lightbox-dialog" class="lightbox">
             <div class="lightbox__content">
-                Lightbox!
+                <button id="lightbox-close" class="lightbox__close">
+                    <img
+                        class="lightbox__close--image"
+                        src="/images/icon-close.svg"
+                        alt="Close lightbox"
+                    />
+                </button>
+                <div class="lightbox__slider">
+                    <img
+                        src="/images/image-product-1.jpg"
+                        alt="Lightbox image"
+                    />
+                    <div class="lightbox__control">
+                        <button
+                            id="lightbox-left"
+                            class="lightbox__control--button"
+                        >
+                            <img
+                                class="lightbox__control--image"
+                                src="/images/icon-previous.svg"
+                                alt="Previous button"
+                            />
+                        </button>
+                        <button
+                            id="lightbox-right"
+                            class="lightbox__control--button"
+                        >
+                            <img
+                                class="lightbox__control--image"
+                                src="/images/icon-next.svg"
+                                alt="Next button"
+                            />
+                        </button>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <ul class="thumbnails__list">
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-1-thumbnail.jpg"
+                                    alt="First"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-2-thumbnail.jpg"
+                                    alt="Second"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-3-thumbnail.jpg"
+                                    alt="Third"
+                                />
+                            </button>
+                        </li>
+                        <li class="thumbnails__list--item">
+                            <button class="thumbnails__button">
+                                <img
+                                    class="thumbnails__image"
+                                    src="/images/image-product-4-thumbnail.jpg"
+                                    alt="Fourth"
+                                />
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </dialog>
     </body>
