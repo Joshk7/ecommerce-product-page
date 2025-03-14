@@ -11,6 +11,8 @@ const sliderImage = slider.querySelector(".slider__image");
 
 const [sliderLeft, sliderRight] = slider.querySelectorAll(".slider__button");
 
+const mediaQuery = window.matchMedia("(min-width: 64rem)");
+
 const images = [
     "/images/image-product-1.jpg",
     "/images/image-product-2.jpg",
@@ -62,6 +64,15 @@ const handleSliderRight = (e) => {
     const newSource = images[sliderIndex];
     sliderImage.src = newSource;
 };
+
+const handleLargeScreen = (e) => {
+    if (e.matches) {
+        console.log(lightboxButton);
+        lightboxButton.disabled = false;
+    }
+}
+
+handleLargeScreen(mediaQuery);
 
 menuButton.addEventListener("click", handleOpenMenu);
 menuDialog.addEventListener("click", handleLeaveMenu);
