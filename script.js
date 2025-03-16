@@ -20,6 +20,10 @@ const lightboxRight = document.getElementById("lightbox-right");
 const lightboxThumbnails = document.getElementById("lightbox-thumbnails");
 const lightboxThumbnailButtons = lightboxThumbnails.querySelectorAll("button");
 
+const quantityAmount = document.getElementById("quantity-amount");
+const quantityDecrease = document.getElementById("quantity-decrease");
+const quantityIncrease = document.getElementById("quantity-increase");
+
 const mediaQuery = window.matchMedia("(min-width: 64rem)");
 
 const images = [
@@ -38,6 +42,7 @@ const thumbnails = [
 
 let mainIndex = 0;
 let lightboxIndex = 0;
+let quantity = 0;
 
 const setMainIndex = (index) => {
     mainThumbnailButtons[mainIndex].dataset.selected = "false";
@@ -53,6 +58,11 @@ const setLightboxIndex = (index) => {
     lightboxThumbnailButtons[index].dataset.selected = "true";
     const newSource = images[lightboxIndex];
     lightboxImage.src = newSource;
+}
+
+const setQuantity = (newQuantity) => {
+    quantity = newQuantity;
+    quantityAmount.textContent = quantity;
 }
 
 const handleOpenMenu = (e) => {
@@ -113,6 +123,16 @@ const handleLightboxThumbnail = (e) => {
     setLightboxIndex(newIndex);
 }
 
+const handleQuantityDecrease = (e) => {
+    if (quantity > 0) {
+        setQuantity(quantity - 1);
+    }
+}
+
+const handleQuantityIncrease = (e) => {
+    setQuantity(quantity + 1);
+}
+
 const handleLargeScreen = (e) => {
     if (e.matches) {
         lightboxButton.disabled = false;
@@ -134,4 +154,6 @@ lightboxRight.addEventListener("click", handleLightboxRight);
 lightboxThumbnailButtons.forEach((button) => {
     button.addEventListener("click", handleLightboxThumbnail);
 });
+quantityDecrease.addEventListener("click", handleQuantityDecrease);
+quantityIncrease.addEventListener("click", handleQuantityIncrease);
 handleLargeScreen(mediaQuery);

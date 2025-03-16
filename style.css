@@ -376,7 +376,7 @@ main {
     row-gap: 1rem;
 }
 
-.quantity__increment {
+.quantity__content {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -395,8 +395,7 @@ main {
     cursor: pointer;
 }
 
-.quantity__button:hover .quantity__icon,
-.quantity__button:focus .quantity__icon {
+.quantity__button:hover .quantity__icon {
     filter: brightness(0) saturate(100%) invert(92%) sepia(43%) saturate(7302%)
         hue-rotate(307deg) brightness(98%) contrast(104%);
 }
@@ -652,7 +651,7 @@ footer {
         column-gap: 0.5rem;
     }
 
-    .quantity__increment {
+    .quantity__content {
         flex: 1;
     }
 
