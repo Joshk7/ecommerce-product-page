@@ -392,6 +392,7 @@ main {
     justify-content: center;
     align-items: center;
     outline-color: var(--orange-500);
+    cursor: pointer;
 }
 
 .quantity__button:hover .quantity__icon,
