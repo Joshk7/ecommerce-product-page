@@ -24,6 +24,11 @@ const quantityAmount = document.getElementById("quantity-amount");
 const quantityDecrease = document.getElementById("quantity-decrease");
 const quantityIncrease = document.getElementById("quantity-increase");
 
+const addToCart = document.getElementById("add-to-cart");
+const cartButton = document.getElementById("cart");
+const checkoutDialog = document.getElementById("checkout-dialog");
+
+
 const mediaQuery = window.matchMedia("(min-width: 64rem)");
 
 const images = [
@@ -133,6 +138,10 @@ const handleQuantityIncrease = (e) => {
     setQuantity(quantity + 1);
 }
 
+const handleCartButton = (e) => {
+    checkoutDialog.showModal();
+}
+
 const handleLargeScreen = (e) => {
     if (e.matches) {
         lightboxButton.disabled = false;
@@ -156,4 +165,5 @@ lightboxThumbnailButtons.forEach((button) => {
 });
 quantityDecrease.addEventListener("click", handleQuantityDecrease);
 quantityIncrease.addEventListener("click", handleQuantityIncrease);
+cartButton.addEventListener("click", handleCartButton);
 handleLargeScreen(mediaQuery);
