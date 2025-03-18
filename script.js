@@ -90,6 +90,13 @@ const handleLeaveMenu = (e) => {
     }
 };
 
+const handleLeaveCheckout = (e) => {
+    console.log(e.target);
+    if (!cartButton.contains(e.target) && !checkoutDialog.contains(e.target)) {
+        checkoutDialog.close();
+    }
+}
+
 const handleOpenLightbox = (e) => {
     lightboxDialog.showModal();
 };
@@ -139,7 +146,11 @@ const handleQuantityIncrease = (e) => {
 }
 
 const handleCartButton = (e) => {
-    checkoutDialog.showModal();
+    if (checkoutDialog.open) {
+        checkoutDialog.close();
+    } else {
+        checkoutDialog.show();
+    }
 }
 
 const handleLargeScreen = (e) => {
@@ -149,7 +160,7 @@ const handleLargeScreen = (e) => {
 }
 
 menuButton.addEventListener("click", handleOpenMenu);
-menuDialog.addEventListener("click", handleLeaveMenu);
+// menuDialog.addEventListener("click", handleLeaveMenu);
 menuClose.addEventListener("click", handleCloseMenu);
 lightboxButton.addEventListener("click", handleOpenLightbox);
 mainThumbnailButtons.forEach((button) => {
@@ -167,3 +178,5 @@ quantityDecrease.addEventListener("click", handleQuantityDecrease);
 quantityIncrease.addEventListener("click", handleQuantityIncrease);
 cartButton.addEventListener("click", handleCartButton);
 handleLargeScreen(mediaQuery);
+
+document.addEventListener("click", handleLeaveCheckout);
