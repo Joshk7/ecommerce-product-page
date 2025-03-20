@@ -187,6 +187,8 @@ nav {
     position: absolute;
     z-index: 1;
     left: -50%;
+    border: none;
+    background: var(--white);
 }
 
 .avatar {
