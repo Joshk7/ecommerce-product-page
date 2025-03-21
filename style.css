@@ -186,10 +186,21 @@ nav {
 .checkout {
     position: absolute;
     z-index: 1;
-    left: -50%;
     border: none;
+    border-radius: 0.625rem;
+    box-shadow: 0 1.25rem 3.125rem #1d20261a;
     background: var(--white);
+    padding-block: 1.5rem;
+    width: 300px;
+    /* transform: translate(-70%); */
+
+    left: 50%;
+    transform: translate(-50%);
 }
+
+/* .checkout__content {
+    
+} */
 
 .avatar {
     border-radius: 100%;
@@ -305,8 +316,6 @@ main {
     background: var(--white);
     opacity: 0.5;
 }
-
-
 
 .thumbnails__image {
     border-radius: 0.625rem;
@@ -476,7 +485,8 @@ footer {
 .panel__close:hover,
 .panel__close:focus {
     cursor: pointer;
-    filter: brightness(0) saturate(100%) invert(51%) sepia(68%) saturate(881%) hue-rotate(345deg) brightness(100%) contrast(103%);
+    filter: brightness(0) saturate(100%) invert(51%) sepia(68%) saturate(881%)
+        hue-rotate(345deg) brightness(100%) contrast(103%);
 }
 
 .panel__list {
@@ -515,13 +525,15 @@ footer {
     width: 1.25rem;
     border: none;
     background: none;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(104%) contrast(104%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+        hue-rotate(61deg) brightness(104%) contrast(104%);
 }
 
 .lightbox__close:hover,
 .lightbox__close:focus {
     cursor: pointer;
-    filter: brightness(0) saturate(100%) invert(65%) sepia(45%) saturate(4731%) hue-rotate(346deg) brightness(100%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(65%) sepia(45%) saturate(4731%)
+        hue-rotate(346deg) brightness(100%) contrast(102%);
 }
 
 .lightbox__close--image {
@@ -570,14 +582,14 @@ footer {
 
 .lightbox__control--left:hover .lightbox__control--image,
 .lightbox__control--right:hover .lightbox__control--image {
-    filter: brightness(0) saturate(100%) invert(53%) sepia(92%) saturate(1540%) hue-rotate(347deg) brightness(101%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(53%) sepia(92%) saturate(1540%)
+        hue-rotate(347deg) brightness(101%) contrast(101%);
 }
 
 .lightbox__thumbnails {
     max-width: 448px;
     align-self: center;
 }
-
 
 @media screen and (min-width: 40rem) {
     body {
