@@ -193,7 +193,7 @@ nav {
     padding-block: 1.5rem;
     width: 300px;
     /* transform: translate(-70%); */
-
+    margin-block-start: 1.875rem;
     left: 50%;
     transform: translate(-50%);
 }
