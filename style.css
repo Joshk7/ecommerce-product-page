@@ -202,6 +202,11 @@ nav {
     
 } */
 
+.checkout__header {
+    font: var(--text-preset-3-bold);
+    color: var(--gray-950);
+}
+
 .avatar {
     border-radius: 100%;
     background: none;
