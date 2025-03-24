@@ -207,6 +207,11 @@ nav {
     color: var(--gray-950);
 }
 
+.checkout__empty {
+    font: var(--text-preset-3-bold);
+    color: var(--gray-500);
+}
+
 .avatar {
     border-radius: 100%;
     background: none;
