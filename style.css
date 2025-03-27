@@ -185,7 +185,7 @@ nav {
 
 .checkout {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     border: none;
     border-radius: 0.625rem;
     box-shadow: 0 1.25rem 3.125rem #1d20261a;
@@ -198,16 +198,21 @@ nav {
     transform: translate(-50%);
 }
 
-/* .checkout__content {
-    
-} */
+.checkout__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
 
 .checkout__header {
     font: var(--text-preset-3-bold);
     color: var(--gray-950);
+    align-self: flex-start;
+    margin-inline-start: 0.5rem;
 }
 
 .checkout__empty {
+    margin-block: 4.5rem;
     font: var(--text-preset-3-bold);
     color: var(--gray-500);
 }
