@@ -34,6 +34,8 @@ const checkoutFilled = document.getElementById("checkout-filled");
 
 const checkoutAmount = document.getElementById("checkout-amount");
 const checkoutTotal = document.getElementById("checkout-total");
+const checkoutRemove = document.getElementById("checkout-remove");
+const checkoutButton = document.getElementById("checkout-button");
 
 const mediaQuery = window.matchMedia("(min-width: 64rem)");
 const large = window.matchMedia("(min-width: 40rem)");
@@ -191,8 +193,23 @@ const handleAddToCart = (e) => {
     }
 };
 
+const handleRemoveProduct = (e) => {
+    checkoutAmount.textContent = 0;
+    checkoutTotal.textContent = 0;
+    cartAmount.textContent = "";
+    checkoutFilled.style.display = "none";
+    checkoutEmpty.style.display = "block";
+};
+
+const handleCheckoutButton = (e) => {
+    checkoutAmount.textContent = 0;
+    checkoutTotal.textContent = 0;
+    cartAmount.textContent = "";
+    checkoutFilled.style.display = "none";
+    checkoutEmpty.style.display = "block";
+};
+
 menuButton.addEventListener("click", handleOpenMenu);
-// menuDialog.addEventListener("click", handleLeaveMenu);
 menuClose.addEventListener("click", handleCloseMenu);
 lightboxButton.addEventListener("click", handleOpenLightbox);
 mainThumbnailButtons.forEach((button) => {
@@ -212,5 +229,7 @@ cartButton.addEventListener("click", handleCartButton);
 handleLargeScreen(mediaQuery);
 
 addToCart.addEventListener("click", handleAddToCart);
+checkoutRemove.addEventListener("click", handleRemoveProduct);
+checkoutButton.addEventListener("click", handleCheckoutButton);
 
 document.addEventListener("click", handleLeaveCheckout);
