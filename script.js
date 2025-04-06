@@ -91,7 +91,6 @@ const handleLeaveMenu = (e) => {
 };
 
 const handleLeaveCheckout = (e) => {
-    console.log(e.target);
     if (!cartButton.contains(e.target) && !checkoutDialog.contains(e.target)) {
         checkoutDialog.close();
     }
