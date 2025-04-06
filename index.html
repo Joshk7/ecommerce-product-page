@@ -59,17 +59,7 @@
                             src="/images/icon-cart.svg"
                             alt="Open cart items"
                         />
-                        <dialog id="checkout-dialog" class="checkout">
-                            <div class="checkout__content">
-                                <span class="checkout__header">
-                                    Cart
-                                </span>
-                                <div class="checkout__items">
-                                    <hr>
-                                    <p class="checkout__empty">Your cart is empty.</p>
-                                </div>
-                            </div>
-                        </dialog>
+                        <span class="cart__amount" id="cart-amount"></span>
                     </button>
                     <button class="avatar">
                         <img
@@ -113,7 +103,11 @@
                 <div id="main-thumbnails" class="thumbnails">
                     <ul class="thumbnails__list">
                         <li class="thumbnails__list--item">
-                            <button class="thumbnails__button" data-index="0" data-selected="true">
+                            <button
+                                class="thumbnails__button"
+                                data-index="0"
+                                data-selected="true"
+                            >
                                 <img
                                     class="thumbnails__image"
                                     src="/images/image-product-1-thumbnail.jpg"
@@ -184,8 +178,13 @@
                                 alt="Decrease quantity"
                             />
                         </button>
-                        <span id="quantity-amount" class="quantity__amount">0</span>
-                        <button id="quantity-increase" class="quantity__button increase">
+                        <span id="quantity-amount" class="quantity__amount"
+                            >0</span
+                        >
+                        <button
+                            id="quantity-increase"
+                            class="quantity__button increase"
+                        >
                             <img
                                 class="quantity__icon"
                                 src="/images/icon-plus.svg"
@@ -214,6 +213,45 @@
                 >. Coded by <a href="#">Your Name Here</a>.
             </div>
         </footer>
+
+        <dialog id="checkout-dialog" class="checkout">
+            <div class="checkout__content">
+                <span class="checkout__header"> Cart </span>
+                <div class="checkout__items">
+                    <hr class="checkout__divider" />
+                    <p class="checkout__empty" id="checkout-empty">
+                        Your cart is empty.
+                    </p>
+                    <div class="checkout__filled" id="checkout-filled">
+                        <div class="checkout__product">
+                            <img
+                                class="checkout__product--image"
+                                src="/images/image-product-1-thumbnail.jpg"
+                                alt="Product Image"
+                            />
+                            <div>
+                                <p class="checkout__text">
+                                    Fall Limited Edition Sneakers
+                                </p>
+                                <p class="checkout__text">
+                                    $125.00 x
+                                    <span id="checkout-amount">0</span>
+                                    <strong id="checkout-total">$0</strong>
+                                </p>
+                            </div>
+                            <button class="checkout__remove">
+                                <img
+                                    class="checkout__remove--icon"
+                                    src="/images/icon-delete.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </div>
+                        <button class="checkout__button">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
 
         <dialog class="panel" id="menu-dialog">
             <div class="panel__content">
@@ -293,7 +331,11 @@
                 >
                     <ul class="thumbnails__list">
                         <li class="thumbnails__list--item">
-                            <button class="thumbnails__button" data-index="0" data-selected="true">
+                            <button
+                                class="thumbnails__button"
+                                data-index="0"
+                                data-selected="true"
+                            >
                                 <img
                                     class="thumbnails__image"
                                     src="/images/image-product-1-thumbnail.jpg"

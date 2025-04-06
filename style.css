@@ -79,9 +79,6 @@ button:focus {
 }
 
 header {
-    /* padding-inline: 1.5rem;
-    padding-block-start: 1.25rem;
-    padding-block-end: 1.5rem; */
     padding: 1.5rem;
     max-width: 38rem;
     margin-inline: auto;
@@ -182,7 +179,19 @@ nav {
         hue-rotate(177deg) brightness(99%) contrast(101%);
 }
 
+.cart__amount {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 1.25rem;
+    background: var(--orange-500);
+    border-radius: 0.40625rem;
+    color: var(--white);
+    font: bold 0.625rem/normal "Kumbh Sans";
+}
+
 .checkout {
+    top: 5rem;
     position: absolute;
     z-index: 2;
     border: none;
@@ -192,7 +201,6 @@ nav {
     padding-block: 1.5rem;
     width: calc(100% - 1rem);
     margin-inline: 0.5rem;
-    margin-block-start: 2.5rem;
 }
 
 .checkout__content {
@@ -208,10 +216,65 @@ nav {
     margin-inline-start: 0.5rem;
 }
 
+.checkout__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .checkout__empty {
+    margin-inline: auto;
     margin-block: 4.5rem;
     font: var(--text-preset-3-bold);
     color: var(--gray-500);
+}
+
+.checkout__filled {
+    display: none;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.checkout__divider {
+    width: 100%;
+}
+
+.checkout__product {
+    margin-block-start: 1.5rem;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.checkout__product--image {
+    width: 3.125rem;
+    border-radius: 0.25rem;
+}
+
+.checkout__text {
+    font: var(--text-preset-3);
+}
+
+.checkout__remove {
+    background: none;
+    border: none;
+}
+
+.checkout__remove:hover .checkout__remove--icon {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(99%) saturate(0%) hue-rotate(6deg) brightness(96%) contrast(104%);
+}
+
+.checkout__remove:hover {
+    cursor: pointer;
+}
+
+.checkout__button {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.625rem;
+    border: none;
+    background: var(--orange-500);
+    color: var(--black);
+    font: var(--text-preset-3-bold)
 }
 
 .avatar {
@@ -698,8 +761,6 @@ footer {
     .checkout {
         width: 360px;
         margin-block-start: 1.875rem;
-        left: 50%;
-        transform: translate(-50%);
     }
 }
 
