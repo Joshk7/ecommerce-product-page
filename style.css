@@ -162,6 +162,7 @@ nav {
 .cart {
     background: none;
     border: none;
+    position: relative;
 }
 
 .cart:hover,
